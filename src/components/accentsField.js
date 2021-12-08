@@ -91,6 +91,7 @@ export class AccentsField extends React.Component {
             if (i.key === item.key) {
                 i.open = true
             }
+            return i
         })
         this.setState(items)
     }
@@ -101,6 +102,7 @@ export class AccentsField extends React.Component {
             if (i.key === item.key) {
                 i.open = false
             }
+            return i
         })
         this.setState(items)
     }

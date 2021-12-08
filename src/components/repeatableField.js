@@ -57,7 +57,7 @@ export class RepeatableField extends React.Component {
 
         return !items.some((item) => {
             return !item.image
-                || this.props.sdk.parameters.instance.title && !item.title
+                || (this.props.sdk.parameters.instance.title && !item.title)
         })
     }
 
