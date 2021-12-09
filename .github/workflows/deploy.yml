@@ -31,7 +31,7 @@ jobs:
         run: npm run build
         
       - name: Remove asset slashes
-        run: sed -i '.bak' 's,/static,static,g' build/index.html
+        run: sed -i 's,/static,static,g' build/index.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.7
