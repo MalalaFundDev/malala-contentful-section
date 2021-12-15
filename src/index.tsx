@@ -17,6 +17,13 @@ import Config from './components/ConfigScreen';
 import EntryEditor from './components/EntryEditor';
 import LocalhostWarning from './components/LocalhostWarning';
 
+if (process.env.NODE_ENV === 'development') {
+  const moduleAlias = require('@MalalaFundDev/contentful-components');
+
+  moduleAlias.addAlias('@MalalaFundDev/contentful-components', '@MalalaFundDev/contentful-components-dev');
+}
+
+
 if (process.env.NODE_ENV === 'development' && window.self === window.top) {
   // You can remove this if block before deploying your app
   const root = document.getElementById('root');

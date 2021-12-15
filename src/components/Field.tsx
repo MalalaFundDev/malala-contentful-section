@@ -12,10 +12,8 @@ import {FormLabel} from "@contentful/forma-36-react-components";
 /* @ts-ignore */
 import {EditorExtensionSDK, EntryFieldAPI, FieldExtensionSDK, LocalesAPI} from "@contentful/app-sdk";
 /* @ts-ignore */
-import ButtonsField from './buttons'
-import QAndAField from './qAndAField'
-import AccentsField from './accentsField'
-import RepeatableField from './repeatableField'
+
+import {ButtonsField, QAndAField, AccentsField, RepeatableField} from '@MalalaFundDev/contentful-components'
 
 interface FieldProps {
     field: EntryFieldAPI;
