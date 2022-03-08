@@ -166,7 +166,7 @@ const Entry = (props: EditorProps) => {
                     </div> : ''
                 }
                 {
-                    entry.fields.type.getValue() === 'Images' ? <div>
+                    entry.fields.type.getValue() === 'Images' || entry.fields.type.getValue() === 'Photo Downloads' ? <div>
                         <Card className={"f36-padding--l f36-margin-bottom--l"}>
                             {renderField(entry.fields.images)}
                         </Card>
