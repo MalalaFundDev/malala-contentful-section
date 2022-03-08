@@ -38,9 +38,6 @@
     "typescript": "^4.2.2",
     "uniqid": "^5.4.0"
   },
-  "devDependencies": {
-    "@MalalaFundDev/contentful-components-dev": "file:../malala-contentful-components"
-  },
   "scripts": {
     "start": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
