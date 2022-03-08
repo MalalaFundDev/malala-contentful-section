@@ -37,6 +37,7 @@ const Entry = (props: EditorProps) => {
         'title',
         'slug',
         'component',
+        "components",
         'cssClasses',
         'type',
         'data',
@@ -75,7 +76,7 @@ const Entry = (props: EditorProps) => {
         'backgroundVideo',
         "fontSize",
         "accentPosition",
-        "images"
+        "images",
     ]
 
     //Keep track of the field values in state so we can rerender on field change
@@ -105,8 +106,6 @@ const Entry = (props: EditorProps) => {
     function renderField(field: EntryFieldAPI, type: string | null = null, label: string | null = null, instance = {}) {
         return <Field field={field} sdk={props.sdk} locales={locales} type={type} label={label} key={'field-' + field.id} instance={instance}/>
     }
-
-
 
     if (tabNames.length !== tabs.length) {
         setTabs([...tabNames])
@@ -142,6 +141,13 @@ const Entry = (props: EditorProps) => {
                     entry.fields.type.getValue() === 'Entry' ? <div>
                         <Card className={"f36-padding--l f36-margin-bottom--l"}>
                             {renderField(entry.fields.component)}
+                        </Card>
+                    </div> : ''
+                }
+                {
+                    entry.fields.type.getValue() === 'Entries' ? <div>
+                        <Card className={"f36-padding--l f36-margin-bottom--l"}>
+                            {renderField(entry.fields.components)}
                         </Card>
                     </div> : ''
                 }
